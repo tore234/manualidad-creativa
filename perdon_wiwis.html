@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Perdón Wiwis 🐷💖</title>
+<style>
+  body {
+    margin: 0;
+    background: linear-gradient(to bottom, #ffafcc, #ffc8dd, #fde2e4);
+    font-family: "Comic Sans MS", "Poppins", sans-serif;
+    color: #5a0033;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    max-width: 80%;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  button {
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 0.8rem 1.6rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+  }
+
+  button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(255, 105, 180, 0.8);
+  }
+
+  .pig {
+    position: absolute;
+    animation: floatUp 5s linear infinite;
+  }
+
+  @keyframes floatUp {
+    from { transform: translateY(0); opacity: 1; }
+    to { transform: translateY(-800px); opacity: 0; }
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  #extra {
+    margin-top: 2rem;
+    font-size: 1.3rem;
+    color: #b5179e;
+    font-weight: bold;
+  }
+</style>
+</head>
+<body>
+
+<h1>Perdón Wiwis 🐷🥺</h1>
+<p>
+Sé que te hice enojar, y de verdad lo siento mucho.  
+Eres mi  mejor amiga, y sin ti todo está más aburrido.  
+¿Me perdonas? 🥺💞  
+</p>
+
+<button onclick="launchPigs()">Haz clic si me perdonas 🐷✨</button>
+
+<div id="extra" class="hidden">Gracias por seguir aquí, Wiwis ✨ Eres el mejor puerquito del universo 🐷🌸</div>
+
+<script>
+function launchPigs() {
+  for (let i = 0; i < 20; i++) {
+    const pig = document.createElement("div");
+    pig.classList.add("pig");
+    pig.innerHTML = "🐷";
+    pig.style.left = Math.random() * 100 + "vw";
+    pig.style.fontSize = Math.random() * 20 + 20 + "px";
+    pig.style.animationDuration = Math.random() * 2 + 3 + "s";
+    document.body.appendChild(pig);
+    setTimeout(() => pig.remove(), 5000);
+  }
+  document.getElementById("extra").classList.remove("hidden");
+}
+</script>
+
+</body>
+</html>
